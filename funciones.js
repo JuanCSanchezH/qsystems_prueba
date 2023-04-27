@@ -93,13 +93,38 @@ function anagrama(palabra1, palabra2) {
 
 // EJERCICIO 3
 
-function invert(arreglo){
-    let nuevoArreglo = []
+function invert(arreglo) {
+    
     arreglo = arreglo.split("").filter(el => el != " " && el != ","); //Partición y filtrado
-    for(i = 0; i < arreglo.length; i++){
-        nuevoArreglo[i] = arreglo[arreglo.length-i-1]; //Intercambio de posiciones
+
+    let esp = [];
+    let noEsp = [];
+  
+    // Separar los caracteres especiales de los demás caracteres
+    for (let i = 0; i < arreglo.length; i++) {
+        if (!(/[a-zA-Z0-9]/).test(arreglo[i])) {
+            esp.push(arreglo[i]);
+        } else {
+            noEsp.push(arreglo[i]);
+        }
     }
-    document.getElementById('inv').innerHTML = nuevoArreglo;
+
+    noEsp.reverse(); // Invertir el arreglo de los demás caracteres
+  
+    // Unir los arreglos en el orden correcto
+    let result = [];
+    let indEsp = 0;
+    let indNoEsp = 0;
+    for (let i = 0; i < arreglo.length; i++) {
+        if (!(/[a-zA-Z0-9]/).test(arreglo[i])) {
+            result.push(esp[indEsp]);
+            indEsp++;
+        } else {
+            result.push(noEsp[indNoEsp]);
+            indNoEsp++;
+        }
+    }
+    document.getElementById('inv').innerHTML = result;
 }
 
 // EJERCICIO 4
