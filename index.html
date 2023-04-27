@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Librería de bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Archivo css-->
+    <link rel="stylesheet" type="text/css" href="prueba.css" th:href="@{static/css/index.css}">
+</head>
+
+<body class="text-center">
+    <div class="cover-container flex-column">
+        <header class="masthead">
+            <div class="inner">
+                <nav class="nav nav-masthead justify-content-center">
+                    <a class="nav-link" href="index.html">Inicio</a>
+                    <a class="nav-link" href="login.html">Login</a>
+                </nav>
+            </div>
+        </header>
+        <h1 class="cover-heading m-5">Prueba Técnica QSystems</h1>
+
+        <!-- -->
+
+        <h5 >Ejercicio 1</h5>
+        <div class="row mb-2">
+            <div class="col">
+                <div class="row my-3" style="width: 300px;">
+                    <input type="text" placeholder="Escriba el arreglo" id="arreglo">
+                </div>
+                <div class="row mb-3" style="width: 300px;">
+                    <input type="number" placeholder="Escriba el numero" id="num">
+                </div>
+            </div>
+            <div class="col">
+                <h5 >Respuesta</h5>
+                <p class="lead" id="numRes1"></p>
+            </div>
+        </div>
+
+        <!-- -->
+
+        <h5 class="mt-5">Ejercicio 2</h5>
+        <div class="row mb-2">
+            <div class="col">
+                <div class="row my-3" style="width: 300px;">
+                    <input type="text" placeholder="Escriba la palabra" id="pal">
+                </div>
+                <div class="row mb-3" style="width: 300px;">
+                    <input type="text" placeholder="Escriba el posible anagrama" id="ana">
+                </div>
+            </div>
+            <div class="col">
+                <h5 >Respuesta</h5>
+                <p class="lead" id="anaRes"></p>
+            </div>
+        </div>
+
+        <!-- -->
+
+        <h5 class="mt-5">Ejercicio 3</h5>
+        <div class="row mb-2">
+            <div class="col">
+                <div class="row my-3" style="width: 300px;">
+                    <input type="text" placeholder="Escriba el arreglo" id="array">
+                </div>
+            </div>
+            <div class="col">
+                <h5 >Respuesta</h5>
+                <p class="lead" id="inv"></p>
+            </div>
+        </div>
+
+        <!-- -->
+
+        <h5 class="mt-5">Ejercicio 4</h5>
+        <div class="row mb-5">
+            <div class="col">
+                <div class="text_area my-3" style="width: 300px;">
+                    <textarea id="texto" class="form-control" id="FormControlTextarea1" rows="5"></textarea>
+                </div> 
+            </div>
+            <div class="col">
+                <h5 >Respuesta</h5>
+                <ul class="list-group list-group-flush mb-3">
+                    <li id="cantidad" class="list-group-item lead"></li>
+                    <li id="primera" class="list-group-item lead"></li>
+                    <li id="ultima" class="list-group-item lead"></li>
+                    <li id="textInv" class="list-group-item lead"></li>
+                </ul>
+            </div>
+        </div>
+        <button type="button" class="btn btn-primary btn-block btn-large mb-5"  onclick="Envio1()">Enviar</button>
+    </div>
+</body>
+
+<script src="funciones.js"></script>
+
+</html>
